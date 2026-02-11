@@ -22,7 +22,7 @@
   };
 
   function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[]\]/g, '\$&');
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\$&');
   }
 
   const Validators = {
@@ -33,12 +33,12 @@
     },
     email: (val) => {
       if (!val || !val.trim()) return 'E-pasts ir obligāts';
-      if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(val)) return 'E-pasta formāts nav derīgs';
+      if (!/^[^s@]+@[^s@]+\.[^s@]+$/.test(val)) return 'E-pasta formāts nav derīgs';
       return null;
     },
     phone: (val) => {
       if (!val || !val.trim()) return 'Tālrunis ir obligāts';
-      if (!/^[ds+-()]{7,20}$/.test(val)) return 'Tālruņa numurs nav derīgs';
+      if (!/^[ds+\-()]{7,20}$/.test(val)) return 'Tālruņa numurs nav derīgs';
       return null;
     },
     message: (val) => {

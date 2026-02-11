@@ -1,4 +1,64 @@
 <!DOCTYPE html><html lang="lv"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "support@domain.com",
+      "telephone": "+371 6 4868001",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Z-Towers, Ķīpsalas iela 8, Floor 10, Office 608, LV-1048 Rīga"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@domain.com",
+        "telephone": "+371 6 4868001"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com#webpage",
+      "url": "https://domain.com",
+      "name": "Auto Apdrošināšana Latvijā - Uzticami Risinājumi | domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "lv",
+      "description": "Profesionāla auto apdrošināšana Latvijā. Ātrs piedāvājums, izdevīgas cenas un uzticami apdrošināšanas risinājumi visiem transportlīdzekļu veidiem."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Profesionāla auto apdrošināšana Latvijā. Ātrs piedāvājums, izdevīgas cenas un uzticami apdrošināšanas risinājumi visiem transportlīdzekļu veidiem.">
@@ -13,32 +73,37 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header">
-   <div class="l-header__content l-container">
-    <div class="l-header__brand">
-     <a href="index.html" class="c-logo" aria-label="AutoDrošība - Sākumlapa"> 
-      <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-       <rect width="40" height="40" rx="8" fill="var(--color-primary)"></rect> <path d="M20 10L28 20L20 30L12 20L20 10Z" fill="white"></path> <text x="48" y="26" font-family="var(--font-heading)" font-size="18" font-weight="700" fill="var(--color-text)">AutoDrošība</text>
-      </svg> 
-     </a>
-    </div>
-    <button class="c-nav__toggle" type="button" aria-controls="c-nav" aria-expanded="false" aria-label="Atvērt navigācijas izvēlni"><span></span> <span></span> <span></span></button>
-    <nav class="l-header__nav c-nav" id="c-nav" role="navigation" aria-label="Galvenā navigācija">
-     <ul class="c-nav__list">
-      <li class="c-nav__item"><a href="index.html" class="c-nav__link" aria-current="page">Sākums</a></li>
-      <li class="c-nav__item"><a href="about.html" class="c-nav__link">Par Mums</a></li>
-      <li class="c-nav__item"><a href="services.html" class="c-nav__link">Pakalpojumi</a></li>
-      <li class="c-nav__item"><a href="portfolio.html" class="c-nav__link">Portfolio</a></li>
-      <li class="c-nav__item"><a href="contact.html" class="c-nav__link">Kontakti</a></li>
-     </ul>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./portfolio.html">Portfolio</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
     </nav>
-   </div>
-  </header>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./portfolio.html">Portfolio</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main>
    <section class="l-hero" data-aos="fade-in">
-    <div class="l-hero__content l-container">
+    <div class="l-hero__content container">
      <div class="l-hero__text">
       <h1>Drošība Uz Ceļa Sākas Šeit</h1>
       <p class="l-hero__subtitle">Profesionāla auto apdrošināšana ar individuālu pieeju. Aizsargājiet savu transportlīdzekli ar labākajiem tirgus piedāvājumiem Latvijā.</p>
@@ -49,7 +114,7 @@
     </div>
    </section>
    <section class="l-section" id="search" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <h2 class="l-section__title u-text-center">Atrodiet Savu Apdrošināšanas Risinājumu</h2>
      <p class="l-section__subtitle u-text-center">Ātri un vienkārši salīdziniet piedāvājumus</p>
      <div class="c-search-bar">
@@ -70,7 +135,7 @@
     </div>
    </section>
    <section class="l-section l-section--bg" id="features" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <h2 class="l-section__title u-text-center">Kāpēc Izvēlēties Mūs</h2>
      <div class="l-grid l-grid--3col">
       <div class="c-card" data-aos="fade-up" data-aos-delay="100">
@@ -110,7 +175,7 @@
     </div>
    </section>
    <section class="l-section" id="brands" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <h2 class="l-section__title u-text-center">Uzticami Partneri</h2>
      <p class="l-section__subtitle u-text-center">Sadarbojamies ar vadošajiem apdrošinātājiem Latvijā</p>
      <div class="c-brands">
@@ -140,7 +205,7 @@
     </div>
    </section>
    <section class="l-section l-section--bg" id="testimonials" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <h2 class="l-section__title u-text-center">Ko Saka Mūsu Klienti</h2>
      <div class="l-grid l-grid--2col">
       <div class="c-card c-card--testimonial" data-aos="fade-right" data-aos-delay="100">
@@ -185,7 +250,7 @@
     </div>
    </section>
    <section class="l-section" id="help-center" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="c-help-center">
       <div class="c-help-center__content">
        <h2 class="c-help-center__title">Nepieciešama Palīdzība?</h2>
@@ -201,7 +266,7 @@
         </svg>
         <div>
          <p class="c-help-center__label">Tālrunis</p>
-         <a href="tel:{telephone}" class="c-help-center__value">{telephone}</a>
+         <a href="tel:+371 6 4868001" class="c-help-center__value">+371 6 4868001</a>
         </div>
        </div>
        <div class="c-help-center__item">
@@ -210,7 +275,7 @@
         </svg>
         <div>
          <p class="c-help-center__label">E-pasts</p>
-         <a href="mailto:info@domain.com" class="c-help-center__value">info@domain.com</a>
+         <a href="mailto:support@domain.com" class="c-help-center__value">support@domain.com</a>
         </div>
        </div>
       </div>
@@ -218,7 +283,7 @@
     </div>
    </section>
    <section class="l-section l-section--cta" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="c-cta">
       <h2 class="c-cta__title">Gatavs Sākt?</h2>
       <p class="c-cta__text">Saņemiet personalizētu auto apdrošināšanas piedāvājumu tikai dažu minūšu laikā</p>
@@ -227,63 +292,65 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer" role="contentinfo">
-   <div class="l-footer__content l-container">
-    <div class="l-footer__grid">
-     <div class="l-footer__section">
-      <h3 class="l-footer__heading">AutoDrošība</h3>
-      <p class="l-footer__text">Profesionāla auto apdrošināšana ar individuālu pieeju. Jūsu drošība uz ceļa ir mūsu prioritāte.</p>
-     </div>
-     <div class="l-footer__section">
-      <h3 class="l-footer__heading">Navigācija</h3>
-      <ul class="l-footer__list">
-       <li><a href="index.html" class="l-footer__link">Sākums</a></li>
-       <li><a href="about.html" class="l-footer__link">Par Mums</a></li>
-       <li><a href="services.html" class="l-footer__link">Pakalpojumi</a></li>
-       <li><a href="portfolio.html" class="l-footer__link">Portfolio</a></li>
-       <li><a href="contact.html" class="l-footer__link">Kontakti</a></li>
-      </ul>
-     </div>
-     <div class="l-footer__section">
-      <h3 class="l-footer__heading">Juridiskā Informācija</h3>
-      <ul class="l-footer__list">
-       <li><a href="privacy.html" class="l-footer__link">Privātuma Politika</a></li>
-       <li><a href="terms_and_conditions.html" class="l-footer__link">Noteikumi un Nosacījumi</a></li>
-       <li><a href="terms_of_services.html" class="l-footer__link">Pakalpojumu Noteikumi</a></li>
-       <li><a href="cookie_policy.html" class="l-footer__link">Sīkdatņu Politika</a></li>
-       <li><a href="gdpr-rights.html" class="l-footer__link">GDPR Tiesības</a></li>
-       <li><a href="impressum.html" class="l-footer__link">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="l-footer__section">
-      <h3 class="l-footer__heading">Kontakti</h3>
-      <ul class="l-footer__list l-footer__list--contact">
-       <li>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="tel:{telephone}" class="l-footer__link">{telephone}</a>
-       </li>
-       <li>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M3 8L10.89 13.26C11.5417 13.6783 12.4583 13.6783 13.11 13.26L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="mailto:info@domain.com" class="l-footer__link">info@domain.com</a>
-       </li>
-       <li>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M17.657 16.657L13.414 20.9C12.2284 22.0856 10.2716 22.0856 9.08601 20.9L4.84301 16.657C1.08301 12.897 1.08301 6.60298 4.84301 2.84298C8.60301 -0.917019 14.897 -0.917019 18.657 2.84298C22.417 6.60298 22.417 12.897 18.657 16.657H17.657Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
-        </svg>
-        <span class="l-footer__link">{address}</span>
-       </li>
-      </ul>
-     </div>
+  <footer class="dr-footer" aria-labelledby="dr-footer-heading">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo-wrap" aria-label="domain">
+          <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+       <rect width="40" height="40" rx="8" fill="var(--color-primary)"></rect> <path d="M20 10L28 20L20 30L12 20L20 10Z" fill="white"></path> <text x="48" y="26" font-family="var(--font-heading)" font-size="18" font-weight="700" fill="var(--color-text)">AutoDrošība</text>
+      </svg>
+        </div>
+        <p id="dr-footer-heading" class="dr-footer-heading">Uzticams partneris jūsu AutoDrošība risinājumiem.</p>
+      </div>
+      <nav class="dr-footer-nav" aria-label="Galvenā navigācija">
+        <h2 class="dr-footer-title">Navigācija</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+          <li class="dr-footer-nav-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+          <li class="dr-footer-nav-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+          <li class="dr-footer-nav-item"><a href="./portfolio.html" class="dr-footer-link">Portfolio</a></li>
+          <li class="dr-footer-nav-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Juridiskā informācija">
+        <h2 class="dr-footer-title">Juridiskā informācija</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="dr-footer-contact" aria-label="Kontaktinformācija">
+        <h2 class="dr-footer-title">Kontakti</h2>
+        <ul class="dr-footer-contact-list">
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adrese:</span> <span class="dr-footer-contact-value">Z-Towers, Ķīpsalas iela 8, Floor 10, Office 608, LV-1048 Rīga</span></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Tālrunis:</span> <a href="tel:+371 6 4868001" class="dr-footer-link">+371 6 4868001</a></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-pasts:</span> <a href="mailto:support@domain.com" class="dr-footer-link">support@domain.com</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="l-footer__bottom">
-     <p class="l-footer__copyright">© 2025 AutoDrošība. Visas tiesības aizsargātas.</p>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">Šī vietne ir informatīvs resurss, ko nodrošina domain. Visa informācija tiek piedāvāta "tāda, kā ir" formātā, un domain.com neuzņemas atbildību par iespējamām kļūdām vai izmaiņām saturā.</p>
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>

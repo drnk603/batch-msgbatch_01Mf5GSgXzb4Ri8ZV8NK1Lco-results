@@ -693,7 +693,6 @@ p {
   transition: var(--transition-base);
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .c-card:hover {
